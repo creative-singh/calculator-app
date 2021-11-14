@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --darkColor: #000;
+  --lightColor: #fff;
+  --firstColor: #3E065f;
+  --secondColor: #700897;
+  --thirdColor: #8E05C2;
+  --fourthColor: #9920C9;
+  --bgColor: #A60AE4;
+}
+
+body{
+  background: var(--bgColor);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator{
+  background: var(--darkColor);
+  width: 290px;
+  padding: 1em;
+  border-radius: 1em;
+  box-sizing: border-box;
+  box-shadow: -10px 10px 4px 2px rgb(0 0 0 / 15%);
+}
+
+.btnCalculator{
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 3fr);
+  gap: 6px;
+}
+
+.output{
+  width: 100%;
+  box-sizing: border-box;
+  height: 54px;
+  border-radius: .5em;
+  outline: none;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 17.5px;
+  padding: .3em 1em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: right;
+}
+
+button{
+  height: 55px;
+  border-radius: .5em;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: var(--firstColor);
+  color: var(--lightColor);
+}
+
+.btnEqual{
+  grid-row: span 2;
+  height: 100%;
+  background: var(--thirdColor);
+}
+
+.btnClear, .btnBack{
+  background: var(--fourthColor);
+}
+
+.operation{
+  background: var(--secondColor);
+}
+
+button:active{
+  transform: scale(0.85);
+}
